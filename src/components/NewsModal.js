@@ -25,9 +25,8 @@ function NewsModal({ articleId }) {
   return (
     <Dialog fullScreen open={true} onClick={closeModal}>
       <DialogContent className={classes.articleModal}>
-        {loading && <LoadingSpinner />}
         {error && <pre>error</pre>}
-        {data && (
+        {data && data.fashionunitedNlNewsArticle && (
           <Paper className={classes.articleContainer} elevation={4}>
             <ArticleImage imageUrl={data.fashionunitedNlNewsArticle.imageUrl} />
             <Typography
