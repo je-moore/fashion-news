@@ -23,3 +23,9 @@ export const useNewsCardStyles = makeStyles({
   },
 })
 
+export const useLoadMoreButtonStyles = makeStyles({
+  loadMore: {
+    textAlign: 'center',
+    marginBottom: '20px',
+  },
+})

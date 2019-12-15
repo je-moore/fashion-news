@@ -11,7 +11,9 @@ const App = () => {
       <main>
         {loading && <pre>loading</pre>}
         {error && <pre>error</pre>}
-        {data.fashionunitedNlNewsArticles && <NewsFeed data={data} />}
+        {data.fashionunitedNlNewsArticles && (
+          <NewsFeed data={data} fetchMore={fetchMore} />
+        )}
       </main>
     </div>
   )
