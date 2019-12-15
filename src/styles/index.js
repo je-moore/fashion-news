@@ -29,7 +29,6 @@ export const useNewsCardStyles = makeStyles({
 export const useLoadMoreButtonStyles = makeStyles({
   loadMore: {
     textAlign: 'center',
-    marginBottom: '20px',
   },
 })
 
@@ -54,8 +53,5 @@ export const useModalStyles = makeStyles({
   modalTitle: {
     fontSize: '32px',
     lineWeight: '1.1',
-  },
-  modalDescription: {
-    fontSize: '24px',
   },
 })
