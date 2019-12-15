@@ -1,7 +1,6 @@
 import React from 'react'
 import { render } from '@testing-library/react'
 import { useParams } from 'react-router-dom'
-import { shallow } from 'enzyme'
 import { Typography } from '@material-ui/core'
 import NewsHeader from '../components/NewsHeader'
 

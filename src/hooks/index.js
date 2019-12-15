@@ -1,7 +1,7 @@
 import { useQuery } from '@apollo/react-hooks'
 import { gql } from 'apollo-boost'
 
-const NEWS_FEED = gql`
+export const NEWS_FEED = gql`
   query NewsArticles($offset: Int, $limit: Int, $keywords: [String]) {
     fashionunitedNlNewsArticles(
       keywords: $keywords

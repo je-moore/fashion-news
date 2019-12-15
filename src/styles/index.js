@@ -1,4 +1,5 @@
 import { makeStyles } from '@material-ui/core/styles'
+import { createMuiTheme } from '@material-ui/core/styles'
 
 export const DEFAULT_IMAGE =
   'https://fashionunited.info/global-assets/img/default/fu-default_1200x630_black-favicon.jpg'
@@ -15,14 +16,7 @@ export const useNewsCardStyles = makeStyles({
     margin: '20px',
   },
   title: {
-    fontSize: 14,
-  },
-  description: {
-    fontSize: 12,
-  },
-  cardImg: {
-    width: '100%',
-    boxSizing: 'border-box',
+    padding: '2px',
   },
 })
 
@@ -31,6 +25,7 @@ export const useArticleImageStyles = makeStyles({
     width: '100%',
     boxSizing: 'border-box',
     border: '1px solid #eee',
+    margin: '0 0 0.3%',
   },
   defaultImg: {
     padding: '4.3% 0',
@@ -45,7 +40,7 @@ export const useLoadMoreButtonStyles = makeStyles({
 
 export const useModalStyles = makeStyles({
   articleModal: {
-    backgroundColor: '#eeeeee',
+    backgroundColor: '#f6f7fc',
   },
   articleContainer: {
     backgroundColor: '#ffffff',
@@ -55,14 +50,26 @@ export const useModalStyles = makeStyles({
     cursor: 'pointer',
     padding: '36px',
   },
-  modalImg: {
-    width: '100%',
-    boxSizing: 'border-box',
-    margin: '0 0 16px',
-    border: '1px solid #eee',
-  },
-  modalTitle: {
-    fontSize: '32px',
-    lineWeight: '1.1',
+})
+
+export const fontTheme = createMuiTheme({
+  overrides: {
+    MuiTypography: {
+      h1: {
+        fontSize: '72px',
+        lineHeight: '1.6',
+        fontWeight: '700',
+      },
+      h2: {
+        fontSize: '24px',
+        lineHeight: '1.2',
+        fontWeight: '500',
+      },
+      h4: {
+        fontSize: '16px',
+        lineHeight: '1.4',
+        fontWeight: '500',
+      },
+    },
   },
 })

@@ -12,10 +12,16 @@ function NewsModal({ articleId }) {
   const closeModal = () => {
     history.push('/')
   }
+
   const { loading, error, data } = useFeaturedArticle(articleId)
 
   return (
-    <Dialog fullScreen open={true} onClick={closeModal}>
+    <Dialog
+      fullScreen
+      open={true}
+      onClick={closeModal}
+      data-testid="modalElement"
+    >
       <DialogContent className={classes.articleModal}>
         {loading && <pre>loading</pre>}
         {error && <pre>error</pre>}
@@ -25,7 +31,7 @@ function NewsModal({ articleId }) {
             <Typography
               className={classes.modalTitle}
               color="textPrimary"
-              variant="h4"
+              variant="h2"
               gutterBottom
             >
               {data.fashionunitedNlNewsArticle.title}

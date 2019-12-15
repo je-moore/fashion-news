@@ -17,15 +17,13 @@ function NewsCard({ article }) {
     <Card className={classes.card} onClick={() => openDialog(article.id)}>
       <CardContent>
         <ArticleImage imageUrl={article.imageUrl} />
-        <Typography className={classes.title} color="textPrimary" gutterBottom>
-          <Link to={`/${article.id}`}>{article.title}</Link>
-        </Typography>
         <Typography
-          className={classes.description}
-          color="textSecondary"
+          className={classes.title}
+          color="textPrimary"
+          variant="h4"
           gutterBottom
         >
-          {article.description}
+          <Link to={`/${article.id}`}>{article.title}</Link>
         </Typography>
       </CardContent>
     </Card>
