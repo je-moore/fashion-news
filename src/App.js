@@ -2,6 +2,7 @@ import React from 'react'
 import NewsFeed from './components/NewsFeed'
 import NewsModal from './components/NewsModal'
 import NewsHeader from './components/NewsHeader'
+import LoadingSpinner from './components/LoadingSpinner'
 import { useNewsFeed } from './hooks'
 import { useParams } from 'react-router-dom'
 import { ThemeProvider } from '@material-ui/core/styles'
@@ -18,7 +19,7 @@ const App = () => {
           <NewsHeader />
         </header>
         <main>
-          {loading && <pre>loading</pre>}
+          {loading && <LoadingSpinner />}
           {error && <pre>error</pre>}
           {data.fashionunitedNlNewsArticles && (
             <NewsFeed data={data} fetchMore={fetchMore} />
