@@ -1,6 +1,6 @@
 import React from 'react'
 import { useNewsFeed } from './hooks'
-import NewsCard from './components/NewsCard'
+import NewsFeed from './components/NewsFeed'
 
 const App = () => {
   const { loading, error, data, fetchMore } = useNewsFeed()
@@ -11,10 +11,7 @@ const App = () => {
       <main>
         {loading && <pre>loading</pre>}
         {error && <pre>error</pre>}
-        {data.fashionunitedNlNewsArticles &&
-          data.fashionunitedNlNewsArticles.map(article => (
-            <NewsCard article={article} key={article.id} />
-          ))}
+        {data.fashionunitedNlNewsArticles && <NewsFeed data={data} />}
       </main>
     </div>
   )
