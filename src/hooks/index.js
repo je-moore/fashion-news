@@ -17,6 +17,18 @@ const NEWS_FEED = gql`
   }
 `
 
+const FEATURED_ARTICLE = gql`
+  query NewsArticle($id: Int) {
+    fashionunitedNlNewsArticle(id: $id) {
+      title
+      imageUrl
+      description
+      id
+      url
+    }
+  }
+`
+
 export const useNewsFeed = () => {
   const { loading, error, data, fetchMore } = useQuery(NEWS_FEED, {
     variables: { limit: 12 },
@@ -24,4 +36,12 @@ export const useNewsFeed = () => {
     returnPartialData: true,
   })
   return { loading, error, data, fetchMore }
+}
+
+export const useFeaturedArticle = articleId => {
+  const { loading, error, data } = useQuery(FEATURED_ARTICLE, {
+    variables: { id: Number(articleId) },
+    fetchPolicy: 'cache-and-network',
+  })
+  return { loading, error, data }
 }
