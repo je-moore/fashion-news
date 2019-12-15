@@ -1,5 +1,11 @@
 import React from 'react'
-import { Dialog, DialogContent, Paper, Typography } from '@material-ui/core'
+import {
+  Dialog,
+  DialogContent,
+  Paper,
+  Typography,
+  Link,
+} from '@material-ui/core'
 import { useFeaturedArticle } from '../hooks'
 import { useHistory } from 'react-router-dom'
 import { useModalStyles } from '../styles'
@@ -34,6 +40,17 @@ function NewsModal({ articleId }) {
             <Typography color="textSecondary" gutterBottom>
               {data.fashionunitedNlNewsArticle.description}
             </Typography>
+            <Link
+              href={data.fashionunitedNlNewsArticle.url}
+              onClick={() => false}
+              target="_blank"
+              variant="body2"
+              color="secondary"
+              underline="none"
+              align="right"
+            >
+              Read Article >
+            </Link>
           </Paper>
         )}
       </DialogContent>

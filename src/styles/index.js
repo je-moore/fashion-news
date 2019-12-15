@@ -48,7 +48,7 @@ export const useModalStyles = makeStyles({
     maxWidth: '600px',
     margin: '20px auto',
     cursor: 'pointer',
-    padding: '36px',
+    padding: '36px 36px 24px',
   },
 })
 
@@ -61,7 +61,7 @@ export const fontTheme = createMuiTheme({
         fontWeight: '700',
       },
       h2: {
-        fontSize: '24px',
+        fontSize: '28px',
         lineHeight: '1.2',
         fontWeight: '500',
       },
@@ -69,6 +69,13 @@ export const fontTheme = createMuiTheme({
         fontSize: '16px',
         lineHeight: '1.2',
         fontWeight: '700',
+      },
+      body2: {
+        fontSize: '14px',
+        fontWeight: '700',
+        display: 'block',
+        marginTop: '2em',
+        textTransform: 'uppercase',
       },
     },
   },
