@@ -1,14 +1,9 @@
 import React from 'react'
 import NewsCard from './NewsCard'
-import { makeStyles } from '@material-ui/core/styles'
+import { useNewsFeedStyles } from '../styles'
 
 function NewsFeed({ data }) {
-  const classes = makeStyles({
-    cardContainer: {
-      display: 'grid',
-      gridTemplateColumns: 'repeat(auto-fill, minmax(320px, 1fr))',
-    },
-  })()
+  const classes = useNewsFeedStyles()
 
   return (
     <div className={classes.cardContainer}>
