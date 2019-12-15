@@ -2,6 +2,7 @@ import React from 'react'
 import { useNewsCardStyles } from '../styles'
 import { Card, CardContent, Typography } from '@material-ui/core'
 import { Link } from 'react-router-dom'
+import { useHistory } from 'react-router-dom'
 
 const DEFAULT_IMAGE =
   'https://fashionunited.info/global-assets/img/default/fu-default_1200x630_black-favicon.jpg'
@@ -9,8 +10,13 @@ const DEFAULT_IMAGE =
 function NewsCard({ article }) {
   const classes = useNewsCardStyles()
 
+  const history = useHistory()
+  const openDialog = id => {
+    history.push(`/${id}`)
+  }
+
   return (
-    <Card className={classes.card}>
+    <Card className={classes.card} onClick={() => openDialog(article.id)}>
       <CardContent>
         <img
           className={classes.cardImg}
