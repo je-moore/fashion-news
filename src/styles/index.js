@@ -26,6 +26,17 @@ export const useNewsCardStyles = makeStyles({
   },
 })
 
+export const useArticleImageStyles = makeStyles({
+  articleImg: {
+    width: '100%',
+    boxSizing: 'border-box',
+    border: '1px solid #eee',
+  },
+  defaultImg: {
+    padding: '4.3% 0',
+  },
+})
+
 export const useLoadMoreButtonStyles = makeStyles({
   loadMore: {
     textAlign: 'center',

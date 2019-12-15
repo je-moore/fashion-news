@@ -2,7 +2,8 @@ import React from 'react'
 import { Dialog, DialogContent, Paper, Typography } from '@material-ui/core'
 import { useFeaturedArticle } from '../hooks'
 import { useHistory } from 'react-router-dom'
-import { useModalStyles, DEFAULT_IMAGE } from '../styles'
+import { useModalStyles } from '../styles'
+import ArticleImage from './ArticleImage'
 
 function NewsModal({ articleId }) {
   const classes = useModalStyles()
@@ -20,15 +21,7 @@ function NewsModal({ articleId }) {
         {error && <pre>error</pre>}
         {data && (
           <Paper className={classes.articleContainer} elevation={4}>
-            <img
-              className={classes.modalImg}
-              src={
-                data.fashionunitedNlNewsArticle.imageUrl
-                  ? `https://fashionunited.com${data.fashionunitedNlNewsArticle.imageUrl}`
-                  : DEFAULT_IMAGE
-              }
-              alt=""
-            />
+            <ArticleImage imageUrl={data.fashionunitedNlNewsArticle.imageUrl} />
             <Typography
               className={classes.modalTitle}
               color="textPrimary"
