@@ -5,17 +5,6 @@ import { Link } from 'react-router-dom'
 import { useHistory } from 'react-router-dom'
 import ArticleImage from './ArticleImage'
 
-const slugify = text =>
-  text
-    .toString()
-    .slice(28)
-    .toLowerCase()
-    .replace(/\s+/g, '-')
-    .replace(/[^\w\-]+/g, '')
-    .replace(/\-\-+/g, '-')
-    .replace(/^-+/, '')
-    .replace(/-+$/, '')
-
 function NewsCard({ article }) {
   const classes = useNewsCardStyles()
 
