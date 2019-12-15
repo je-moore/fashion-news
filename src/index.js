@@ -15,7 +15,7 @@ ReactDOM.render(
     <Router>
       <Switch>
         <Route exact path="/" children={<App />} />
-        <Route path="/:modalId" children={<App />} />
+        <Route path="/:slug/:modalId" children={<App />} />
       </Switch>
     </Router>
   </ApolloProvider>,

@@ -16,12 +16,7 @@ function NewsModal({ articleId }) {
   const { loading, error, data } = useFeaturedArticle(articleId)
 
   return (
-    <Dialog
-      fullScreen
-      open={true}
-      onClick={closeModal}
-      data-testid="modalElement"
-    >
+    <Dialog fullScreen open={true} onClick={closeModal}>
       <DialogContent className={classes.articleModal}>
         {loading && <pre>loading</pre>}
         {error && <pre>error</pre>}

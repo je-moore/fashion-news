@@ -67,8 +67,8 @@ export const fontTheme = createMuiTheme({
       },
       h4: {
         fontSize: '16px',
-        lineHeight: '1.4',
-        fontWeight: '500',
+        lineHeight: '1.2',
+        fontWeight: '700',
       },
     },
   },
