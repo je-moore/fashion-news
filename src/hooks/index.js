@@ -19,6 +19,7 @@ const NEWS_FEED = gql`
 
 export const useNewsFeed = () => {
   const { loading, error, data, fetchMore } = useQuery(NEWS_FEED, {
+    variables: { limit: 12 },
     partialRefetch: true,
     returnPartialData: true,
   })
