@@ -1,5 +1,6 @@
 import React from 'react'
 import { useNewsFeed } from './hooks'
+import NewsCard from './components/NewsCard'
 
 const App = () => {
   const { loading, error, data, fetchMore } = useNewsFeed()
@@ -10,7 +11,10 @@ const App = () => {
       <main>
         {loading && <pre>loading</pre>}
         {error && <pre>error</pre>}
-        {data && <pre>{JSON.stringify(data, null, 2)}</pre>}
+        {data.fashionunitedNlNewsArticles &&
+          data.fashionunitedNlNewsArticles.map(article => (
+            <NewsCard article={article} key={article.id} />
+          ))}
       </main>
     </div>
   )
