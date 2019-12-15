@@ -2,10 +2,7 @@ import React from 'react'
 import { Dialog, DialogContent, Paper, Typography } from '@material-ui/core'
 import { useFeaturedArticle } from '../hooks'
 import { useHistory } from 'react-router-dom'
-import { useModalStyles } from '../styles'
-
-const DEFAULT_IMAGE =
-  'https://fashionunited.info/global-assets/img/default/fu-default_1200x630_black-favicon.jpg'
+import { useModalStyles, DEFAULT_IMAGE } from '../styles'
 
 function NewsModal({ articleId }) {
   const classes = useModalStyles()
@@ -18,13 +15,13 @@ function NewsModal({ articleId }) {
 
   return (
     <Dialog fullScreen open={true} onClick={closeModal}>
-      <DialogContent className={classes.articleDialog}>
+      <DialogContent className={classes.articleModal}>
         {loading && <pre>loading</pre>}
         {error && <pre>error</pre>}
         {data && (
           <Paper className={classes.articleContainer} elevation={4}>
             <img
-              className={classes.dialogImg}
+              className={classes.modalImg}
               src={
                 data.fashionunitedNlNewsArticle.imageUrl
                   ? `https://fashionunited.com${data.fashionunitedNlNewsArticle.imageUrl}`
@@ -33,7 +30,7 @@ function NewsModal({ articleId }) {
               alt=""
             />
             <Typography
-              className={classes.dialogTitle}
+              className={classes.modalTitle}
               color="textPrimary"
               variant="h4"
               gutterBottom

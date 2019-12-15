@@ -1,5 +1,8 @@
 import { makeStyles } from '@material-ui/core/styles'
 
+export const DEFAULT_IMAGE =
+  'https://fashionunited.info/global-assets/img/default/fu-default_1200x630_black-favicon.jpg'
+
 export const useNewsFeedStyles = makeStyles({
   cardContainer: {
     display: 'grid',
@@ -31,7 +34,7 @@ export const useLoadMoreButtonStyles = makeStyles({
 })
 
 export const useModalStyles = makeStyles({
-  articleDialog: {
+  articleModal: {
     backgroundColor: '#eeeeee',
   },
   articleContainer: {
@@ -42,17 +45,17 @@ export const useModalStyles = makeStyles({
     cursor: 'pointer',
     padding: '36px',
   },
-  dialogImg: {
+  modalImg: {
     width: '100%',
     boxSizing: 'border-box',
     margin: '0 0 16px',
     border: '1px solid #eee',
   },
-  dialogTitle: {
+  modalTitle: {
     fontSize: '32px',
     lineWeight: '1.1',
   },
-  dialogDescription: {
+  modalDescription: {
     fontSize: '24px',
   },
 })

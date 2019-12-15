@@ -1,6 +1,5 @@
 import { useQuery } from '@apollo/react-hooks'
 import { gql } from 'apollo-boost'
-import { useHistory } from 'react-router-dom'
 
 const NEWS_FEED = gql`
   query NewsArticles($offset: Int, $limit: Int, $keywords: [String]) {
