@@ -29,3 +29,30 @@ export const useLoadMoreButtonStyles = makeStyles({
     marginBottom: '20px',
   },
 })
+
+export const useModalStyles = makeStyles({
+  articleDialog: {
+    backgroundColor: '#eeeeee',
+  },
+  articleContainer: {
+    backgroundColor: '#ffffff',
+    width: '80%',
+    maxWidth: '600px',
+    margin: '20px auto',
+    cursor: 'pointer',
+    padding: '36px',
+  },
+  dialogImg: {
+    width: '100%',
+    boxSizing: 'border-box',
+    margin: '0 0 16px',
+    border: '1px solid #eee',
+  },
+  dialogTitle: {
+    fontSize: '32px',
+    lineWeight: '1.1',
+  },
+  dialogDescription: {
+    fontSize: '24px',
+  },
+})
