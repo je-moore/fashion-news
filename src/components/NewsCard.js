@@ -1,7 +1,6 @@
 import React from 'react'
 import { useNewsCardStyles } from '../styles'
 import { Card, CardContent, Typography } from '@material-ui/core'
-import { Link } from 'react-router-dom'
 import { useHistory } from 'react-router-dom'
 import ArticleImage from './ArticleImage'
 

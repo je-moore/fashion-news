@@ -1,9 +1,9 @@
 import React from 'react'
 import EnzymeToJson from 'enzyme-to-json'
-import { mount } from 'enzyme'
-import { useNewsFeed, useFeaturedArticle } from '../hooks'
+import NewsModal from '../components/NewsModal'
+import { useFeaturedArticle } from '../hooks'
 import { useParams } from 'react-router-dom'
-import App from '../App'
+import { mount } from 'enzyme'
 
 jest.mock('../hooks', () => {
   return {
@@ -78,6 +78,8 @@ jest.mock('react-router-dom', () => {
 })
 
 it('renders correctly', () => {
-  const subject = mount(<App />)
+  const subject = mount(<NewsModal articleId={44366} />)
   expect(EnzymeToJson(subject)).toMatchSnapshot()
+  // const tree = renderer.create(<NewsModal articleId={44366} />).toJSON()
+  // expect(tree).toMatchSnapshot()
 })

@@ -10,7 +10,6 @@ import { useFeaturedArticle } from '../hooks'
 import { useHistory } from 'react-router-dom'
 import { useModalStyles } from '../styles'
 import ArticleImage from './ArticleImage'
-import LoadingSpinner from './LoadingSpinner'
 
 function NewsModal({ articleId }) {
   const classes = useModalStyles()
@@ -26,7 +25,7 @@ function NewsModal({ articleId }) {
     <Dialog fullScreen open={true} onClick={closeModal}>
       <DialogContent className={classes.articleModal}>
         {error && <pre>error</pre>}
-        {data && data.fashionunitedNlNewsArticle && (
+        {!loading && data && data.fashionunitedNlNewsArticle && (
           <Paper className={classes.articleContainer} elevation={4}>
             <ArticleImage imageUrl={data.fashionunitedNlNewsArticle.imageUrl} />
             <Typography

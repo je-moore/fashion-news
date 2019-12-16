@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<ArticleImage>
+  <img
+    alt=""
+    className="makeStyles-articleImg-1 makeStyles-defaultImg-2"
+    src="https://fashionunited.info/global-assets/img/default/fu-default_1200x630_black-favicon.jpg"
+  />
+</ArticleImage>
+`;
